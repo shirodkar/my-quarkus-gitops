@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: my-quarkus-app
-          image: 'image-registry.openshift-image-registry.svc:5000/demo-app/my-quarkus-app@sha256:356f0c4f86b98b65705c648369226f1d170c2c200f11f7052a9cf37266fa3bc3'
+          image: 'quay.io/rh_ee_sshirodk/my-quarkus-app'
           ports:
             - name: http
               containerPort: 8081
