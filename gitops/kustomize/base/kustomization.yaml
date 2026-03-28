@@ -13,4 +13,3 @@ resources:
 
 commonLabels:
   app: my-quarkus-app
-  managed-by: kustomize

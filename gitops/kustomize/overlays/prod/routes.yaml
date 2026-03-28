@@ -1,0 +1,10 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: my-quarkus-app
+spec:
+  to:
+    kind: Service
+    name: my-quarkus-app
+  port:
+    targetPort: '8083'
