@@ -1,0 +1,31 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: my-quarkus-app
+  labels:
+    app: my-quarkus-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-quarkus-app
+  template:
+    metadata:
+      labels:
+        app: my-quarkus-app
+        deployment: my-quarkus-app
+    spec:
+      containers:
+        - name: my-quarkus-app
+          image: 'image-registry.openshift-image-registry.svc:5000/demo-app/my-quarkus-app@sha256:356f0c4f86b98b65705c648369226f1d170c2c200f11f7052a9cf37266fa3bc3'
+          ports:
+            - name: http
+              containerPort: 8081
+              protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 100Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
