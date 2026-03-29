@@ -6,7 +6,7 @@ metadata:
     app: my-quarkus-app
 spec:
   ports:
-    - name: http
+    - name: http-8081
       protocol: TCP
       port: 8081
       targetPort: 8081
