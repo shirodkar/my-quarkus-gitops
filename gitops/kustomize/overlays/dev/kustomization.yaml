@@ -1,12 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: demo-app-dev
-
-bases:
+resources:
   - ../../base
 
-patchesStrategicMerge:
-  - deployment-patch.yaml
-  - service-patch.yaml
-  - route-patch.yaml
+patches:
+  - path: deployment-patch.yaml
+  - path: service-patch.yaml
+  - path: route-patch.yaml
