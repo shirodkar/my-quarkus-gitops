@@ -9,3 +9,10 @@ spec:
         - name: my-quarkus-app
           ports:
             - containerPort: 8082
+          resources:
+            requests:
+              cpu: 20m
+              memory: 200Mi
+            limits:
+              cpu: 1000m
+              memory: 1024Mi
