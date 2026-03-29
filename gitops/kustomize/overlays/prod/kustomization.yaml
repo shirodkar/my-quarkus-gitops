@@ -3,7 +3,10 @@ kind: Kustomization
 
 namespace: demo-app-prod
 
-resources:
-  - deployments.yaml
-  - services.yaml
-  - routes.yaml
+bases:
+  - ../../base
+
+patchesStrategicMerge:
+  - deployment-patch.yaml
+  - service-patch.yaml
+  - route-patch.yaml

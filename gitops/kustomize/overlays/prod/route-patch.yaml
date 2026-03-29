@@ -7,4 +7,4 @@ spec:
     kind: Service
     name: my-quarkus-app
   port:
-    targetPort: '8083'
+    targetPort: '8082'
