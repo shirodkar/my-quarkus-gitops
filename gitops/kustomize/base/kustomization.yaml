@@ -8,6 +8,3 @@ resources:
   - deployments.yaml
   - services.yaml
   - routes.yaml
-
-commonLabels:
-  app: my-quarkus-app
